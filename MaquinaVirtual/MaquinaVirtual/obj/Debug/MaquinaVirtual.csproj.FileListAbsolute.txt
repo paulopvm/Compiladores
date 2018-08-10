@@ -18,3 +18,12 @@ C:\Users\Paulo\Desktop\VIsual Studio Projects\MaquinaVirtual\MaquinaVirtual\obj\
 C:\Users\Paulo\Desktop\VIsual Studio Projects\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.exe
 C:\Users\Paulo\Desktop\VIsual Studio Projects\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.pdb
 C:\Users\Paulo\Desktop\VIsual Studio Projects\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.csprojAssemblyReference.cache
+C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\bin\Debug\MaquinaVirtual.exe.config
+C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.exe
+C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.pdb
+C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\bin\Debug\MaquinaVirtual.exe
+C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\bin\Debug\MaquinaVirtual.pdb
+C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.csprojResolveAssemblyReference.cache
+C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.Form1.resources
+C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.Properties.Resources.resources
+C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.csproj.GenerateResource.Cache

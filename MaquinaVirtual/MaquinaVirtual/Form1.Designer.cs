@@ -81,7 +81,7 @@
             // arquivoToolStripMenuItem
             // 
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             this.arquivoToolStripMenuItem.Click += new System.EventHandler(this.arquivoToolStripMenuItem_Click);
             // 
@@ -93,33 +93,33 @@
             this.breakpointToolStripMenuItem});
             this.executarToolStripMenuItem.Enabled = false;
             this.executarToolStripMenuItem.Name = "executarToolStripMenuItem";
-            this.executarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
+            this.executarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.executarToolStripMenuItem.Text = "Executar";
             this.executarToolStripMenuItem.Click += new System.EventHandler(this.executarToolStripMenuItem_Click);
             // 
             // normalToolStripMenuItem
             // 
             this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            this.normalToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.normalToolStripMenuItem.Text = "Normal";
             this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
             // 
             // passoAPassoToolStripMenuItem
             // 
             this.passoAPassoToolStripMenuItem.Name = "passoAPassoToolStripMenuItem";
-            this.passoAPassoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.passoAPassoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.passoAPassoToolStripMenuItem.Text = "Passo a passo";
             // 
             // breakpointToolStripMenuItem
             // 
             this.breakpointToolStripMenuItem.Name = "breakpointToolStripMenuItem";
-            this.breakpointToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.breakpointToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.breakpointToolStripMenuItem.Text = "Breakpoint";
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // openFileDialog1
@@ -345,6 +345,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Confirmar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 

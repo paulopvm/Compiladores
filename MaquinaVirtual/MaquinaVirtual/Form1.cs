@@ -19,6 +19,7 @@ namespace MaquinaVirtual
         private int[] P = new int[1024]; //Ver o tamanho da pilha
         private int s = -1,i=0;
         private int contLinha;
+        bool flag = false;
         public Form1()
         {
             InitializeComponent();
@@ -123,6 +124,7 @@ namespace MaquinaVirtual
         {
             if(dataGridView1.Rows[0].Cells[1].Value.ToString().Equals("START"))
             {
+                s = -1;
                 for(int j = 1; j < contLinha; j++)
                 {
                     switch (dataGridView1.Rows[j].Cells[1].Value.ToString())
@@ -135,7 +137,7 @@ namespace MaquinaVirtual
 
                             dataGridView2.Rows.Add(m, n);
 
-                            for (k = 0; k < n - 1; k++)
+                            for (k = 0; k <= n - 1; k++)
                             {
                                 s = s + 1;
                                 M[s] = M[m + k];
@@ -242,7 +244,131 @@ namespace MaquinaVirtual
                             s = s - 1;
                             break;
 
+                        case "CMA":
+                            if (M[s - 1] > M[s])
+                            {
+                                M[s - 1] = 1;
+                            }
+                            else
+                            {
+                                M[s - 1] = 0;
+                            }
+                            s = s - 1;
+                            break;
 
+                        case "CEQ":
+                            if (M[s - 1] == M[s])
+                            {
+                                M[s - 1] = 1;
+                            }
+                            else
+                            {
+                                M[s - 1] = 0;
+                            }
+                            s = s - 1;
+                            break;
+
+                        case "CDIF":
+                            if (M[s - 1] != M[s])
+                            {
+                                M[s - 1] = 1;
+                            }
+                            else
+                            {
+                                M[s - 1] = 0;
+                            }
+                            s = s - 1;
+                            break;
+
+                        case "CMEQ":
+                            if (M[s - 1] <= M[s])
+                            {
+                                M[s - 1] = 1;
+                            }
+                            else
+                            {
+                                M[s - 1] = 0;
+                            }
+                            s = s - 1;
+                            break;
+
+                        case "CMAQ":
+                            if (M[s - 1] >= M[s])
+                            {
+                                M[s - 1] = 1;
+                            }
+                            else
+                            {
+                                M[s - 1] = 0;
+                            }
+                            s = s - 1;
+                            break;
+
+                        case "HLT": //observar
+                            break;
+
+                        case "STR":
+                            n = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
+
+                            M[n] = M[s];
+                            s = s - 1;
+                            break;
+
+                        case "JMP":
+                            n = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
+                            i = n;
+                            break;
+
+                        case "JMPF":
+                            n = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
+                            if(M[s] == 0)
+                            {
+                                i = n;
+                            }
+                            else
+                            {
+                                i = i + 1;
+                            }
+                            s = s - 1;
+                            break;
+
+                        case "NULL":
+                            break;
+
+                        case "RD": //ver isso auqi
+                            MessageBox.Show("Entrada de dados requerida!");
+                            textBox1.ReadOnly = false;
+                            flag = false;
+                            s = s + 1;
+                            break;
+
+                        case "DALLOC":
+                            m = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
+                            n = Int32.Parse(dataGridView1.Rows[j].Cells[3].Value.ToString());
+
+                            dataGridView2.Rows.Add(m, n);
+
+                            for (k = (n-1); k >= 0; k--)
+                            {
+                                M[m+k] = M[s];
+                                s = s - 1;
+                            }
+                            break;
+
+                        case "CALL":
+                            n = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
+
+                            s = s + 1;
+                            M[s] = i + 1;
+                            i = n;
+                            break;
+
+                        case "RETURN":
+                            n = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
+
+                            i = M[s];
+                            s = s - 1;
+                            break;
 
                     }
 
@@ -252,6 +378,14 @@ namespace MaquinaVirtual
             {
                 MessageBox.Show("Programa sem a instrução START","ERRO",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            M[s] = Int32.Parse(textBox1.Text);
+            dataGridView5.Rows.Add(textBox1.Text);
+            textBox1.ReadOnly = true;
+            flag = true;
         }
     }
 }
