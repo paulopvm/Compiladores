@@ -55,9 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView5 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -81,7 +78,7 @@
             // arquivoToolStripMenuItem
             // 
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
-            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.arquivoToolStripMenuItem.Text = "Arquivo";
             this.arquivoToolStripMenuItem.Click += new System.EventHandler(this.arquivoToolStripMenuItem_Click);
             // 
@@ -93,33 +90,33 @@
             this.breakpointToolStripMenuItem});
             this.executarToolStripMenuItem.Enabled = false;
             this.executarToolStripMenuItem.Name = "executarToolStripMenuItem";
-            this.executarToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.executarToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.executarToolStripMenuItem.Text = "Executar";
             this.executarToolStripMenuItem.Click += new System.EventHandler(this.executarToolStripMenuItem_Click);
             // 
             // normalToolStripMenuItem
             // 
             this.normalToolStripMenuItem.Name = "normalToolStripMenuItem";
-            this.normalToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.normalToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.normalToolStripMenuItem.Text = "Normal";
             this.normalToolStripMenuItem.Click += new System.EventHandler(this.normalToolStripMenuItem_Click);
             // 
             // passoAPassoToolStripMenuItem
             // 
             this.passoAPassoToolStripMenuItem.Name = "passoAPassoToolStripMenuItem";
-            this.passoAPassoToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.passoAPassoToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.passoAPassoToolStripMenuItem.Text = "Passo a passo";
             // 
             // breakpointToolStripMenuItem
             // 
             this.breakpointToolStripMenuItem.Name = "breakpointToolStripMenuItem";
-            this.breakpointToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.breakpointToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.breakpointToolStripMenuItem.Text = "Breakpoint";
             // 
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.sobreToolStripMenuItem.Text = "Sobre";
             // 
             // openFileDialog1
@@ -225,7 +222,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(466, 297);
+            this.label3.Location = new System.Drawing.Point(370, 293);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 13);
             this.label3.TabIndex = 6;
@@ -235,7 +232,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(334, 297);
+            this.label4.Location = new System.Drawing.Point(238, 293);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 7;
@@ -250,7 +247,7 @@
             this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn4});
             this.dataGridView3.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView3.Location = new System.Drawing.Point(323, 313);
+            this.dataGridView3.Location = new System.Drawing.Point(227, 309);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView3.RowHeadersVisible = false;
@@ -272,7 +269,7 @@
             this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3});
             this.dataGridView4.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView4.Location = new System.Drawing.Point(448, 313);
+            this.dataGridView4.Location = new System.Drawing.Point(352, 309);
             this.dataGridView4.Name = "dataGridView4";
             this.dataGridView4.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView4.RowHeadersVisible = false;
@@ -289,7 +286,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(207, 297);
+            this.label5.Location = new System.Drawing.Point(111, 293);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(93, 13);
             this.label5.TabIndex = 10;
@@ -304,7 +301,7 @@
             this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5});
             this.dataGridView5.GridColor = System.Drawing.SystemColors.ControlLight;
-            this.dataGridView5.Location = new System.Drawing.Point(200, 313);
+            this.dataGridView5.Location = new System.Drawing.Point(104, 309);
             this.dataGridView5.Name = "dataGridView5";
             this.dataGridView5.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dataGridView5.RowHeadersVisible = false;
@@ -318,44 +315,12 @@
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 336);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Entrada de dados";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 362);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(137, 20);
-            this.textBox1.TabIndex = 13;
-            // 
-            // button1
-            // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(15, 398);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Confirmar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.dataGridView5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dataGridView4);
@@ -405,9 +370,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGridView5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem normalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem passoAPassoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem breakpointToolStripMenuItem;

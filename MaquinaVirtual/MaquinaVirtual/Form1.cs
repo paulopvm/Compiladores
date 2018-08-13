@@ -11,6 +11,17 @@ using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.FileIO;
 
+
+/*PROBLEMAS:
+ * ALLOC,DALLOC -> QUAL VALOR PRINTAR NA PILHA? FOR <= ou <
+ * JMP,JMPF: ATRIBUTOS
+ * CALL/RETURN: O QUE FAZER
+ * HLT: PARA A EXECUÇÃO?
+ * 
+ * A FAZER:
+ * MODOS DE EXECUÇAO : BREAKPOINT E PASSO-A-PASSO
+ * OPÇÃO SOBRE.
+ */
 namespace MaquinaVirtual
 {
     public partial class Form1 : Form
@@ -19,12 +30,12 @@ namespace MaquinaVirtual
         private int[] P = new int[1024]; //Ver o tamanho da pilha
         private int s = -1,i=0;
         private int contLinha;
-        bool flag = false;
+
         public Form1()
         {
             InitializeComponent();
-            
-    }
+        }
+
 
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -68,7 +79,6 @@ namespace MaquinaVirtual
                                 break;
                             }
                             Console.WriteLine("{0} field(s)", LineData.Length);
-    
 
                             if (LineData[0].Equals("ALLOC") || LineData[0].Equals("DALLOC"))
                             {
@@ -129,19 +139,22 @@ namespace MaquinaVirtual
                 {
                     switch (dataGridView1.Rows[j].Cells[1].Value.ToString())
                     {
-                        case "ALLOC":
+                        case "ALLOC": 
                             int m, k, n;
 
                             m = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
                             n = Int32.Parse(dataGridView1.Rows[j].Cells[3].Value.ToString());
 
-                            dataGridView2.Rows.Add(m, n);
+                            
 
                             for (k = 0; k <= n - 1; k++)
                             {
                                 s = s + 1;
                                 M[s] = M[m + k];
+                                dataGridView2.Rows.Add(s, M[m + k]);
                             }
+
+                            
                             break;
 
                         case "LDC":
@@ -150,19 +163,23 @@ namespace MaquinaVirtual
 
                             s = s + 1;
                             M[s] = n; //teoricamente "n" é "k"
+                            dataGridView2.Rows.Add(s, n);
                             break;
 
                         case "LDV":
 
                             n = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
 
+
                             s = s + 1;
                             M[s] = M[n];
+                            dataGridView2.Rows.Add(s, n);
                             break;
 
                         case "ADD":
 
                             M[s - 1] = M[s - 1] + M[s];
+                
                             s = s - 1;
 
                             break;
@@ -188,6 +205,7 @@ namespace MaquinaVirtual
                         case "INV":
 
                             M[s] = -M[s];
+                            dataGridView2.Rows.Add(s,M[s].ToString());
                             break;
 
                         case "AND":
@@ -200,8 +218,9 @@ namespace MaquinaVirtual
                             else
                             {
                                 M[s - 1] = 0;
-
                             }
+                            dataGridView2.Rows.Add(s - 1, M[s - 1].ToString());
+
                             s = s - 1;
                             break;
 
@@ -222,12 +241,16 @@ namespace MaquinaVirtual
                                 M[s - 1] = 0;
 
                             }
+                            dataGridView2.Rows.Add(s - 1, M[s - 1].ToString());
+
                             s = s - 1;
                             break;
 
                         case "NEG":
 
                             M[s] = 1 - M[s];
+                            dataGridView2.Rows.Add(s, M[s].ToString());
+
                             break;
 
                         case "CME":
@@ -241,6 +264,8 @@ namespace MaquinaVirtual
                                 M[s - 1] = 0;
 
                             }
+                            dataGridView2.Rows.Add(s - 1, M[s - 1].ToString());
+
                             s = s - 1;
                             break;
 
@@ -253,6 +278,8 @@ namespace MaquinaVirtual
                             {
                                 M[s - 1] = 0;
                             }
+                            dataGridView2.Rows.Add(s - 1, M[s - 1].ToString());
+
                             s = s - 1;
                             break;
 
@@ -265,6 +292,8 @@ namespace MaquinaVirtual
                             {
                                 M[s - 1] = 0;
                             }
+                            dataGridView2.Rows.Add(s - 1, M[s - 1].ToString());
+
                             s = s - 1;
                             break;
 
@@ -277,6 +306,8 @@ namespace MaquinaVirtual
                             {
                                 M[s - 1] = 0;
                             }
+                            dataGridView2.Rows.Add(s - 1, M[s - 1].ToString());
+
                             s = s - 1;
                             break;
 
@@ -289,6 +320,8 @@ namespace MaquinaVirtual
                             {
                                 M[s - 1] = 0;
                             }
+                            dataGridView2.Rows.Add(s - 1, M[s - 1].ToString());
+
                             s = s - 1;
                             break;
 
@@ -301,6 +334,8 @@ namespace MaquinaVirtual
                             {
                                 M[s - 1] = 0;
                             }
+                            dataGridView2.Rows.Add(s - 1, M[s - 1].ToString());
+
                             s = s - 1;
                             break;
 
@@ -309,6 +344,7 @@ namespace MaquinaVirtual
 
                         case "STR":
                             n = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
+                            dataGridView2.Rows.Add(n, M[s]);
 
                             M[n] = M[s];
                             s = s - 1;
@@ -316,12 +352,16 @@ namespace MaquinaVirtual
 
                         case "JMP":
                             n = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
+                            dataGridView2.Rows.Add(s, n);
+
                             i = n;
                             break;
 
                         case "JMPF":
                             n = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
-                            if(M[s] == 0)
+                            dataGridView2.Rows.Add(s, n);
+
+                            if (M[s] == 0)
                             {
                                 i = n;
                             }
@@ -335,23 +375,34 @@ namespace MaquinaVirtual
                         case "NULL":
                             break;
 
-                        case "RD": //ver isso auqi
-                            MessageBox.Show("Entrada de dados requerida!");
-                            textBox1.ReadOnly = false;
-                            flag = false;
+                        case "RD": //ver
                             s = s + 1;
+                            string valor;
+                            //MessageBox.Show("Entrada de dados requerida!");
+                           valor =  Interaction.InputBox("Entrada de dados requerida", "Instrução RD encontrada", "");
+
+                            M[s] = Int32.Parse(valor);
+                            dataGridView5.Rows.Add(valor);
+                            dataGridView2.Rows.Add(s, valor);
+
+                            // textBox1.ReadOnly = false;
+                            // button1_Click(textBox1.Text,e);
+                            
                             break;
 
                         case "DALLOC":
                             m = Int32.Parse(dataGridView1.Rows[j].Cells[2].Value.ToString());
                             n = Int32.Parse(dataGridView1.Rows[j].Cells[3].Value.ToString());
 
-                            dataGridView2.Rows.Add(m, n);
+
 
                             for (k = (n-1); k >= 0; k--)
                             {
                                 M[m+k] = M[s];
                                 s = s - 1;
+                                dataGridView2.Rows.Add(M[m+k], s);
+                                dataGridView2.Rows[dataGridView2.RowCount - 2].DefaultCellStyle.BackColor = Color.Red;
+
                             }
                             break;
 
@@ -378,14 +429,6 @@ namespace MaquinaVirtual
             {
                 MessageBox.Show("Programa sem a instrução START","ERRO",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            M[s] = Int32.Parse(textBox1.Text);
-            dataGridView5.Rows.Add(textBox1.Text);
-            textBox1.ReadOnly = true;
-            flag = true;
         }
     }
 }

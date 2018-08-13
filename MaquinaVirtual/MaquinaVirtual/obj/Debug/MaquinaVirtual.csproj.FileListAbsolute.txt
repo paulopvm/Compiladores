@@ -27,3 +27,13 @@ C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVi
 C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.Form1.resources
 C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.Properties.Resources.resources
 C:\Users\15147861.LAB-INF\Documents\GitHub\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.csproj.GenerateResource.Cache
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\bin\Debug\MaquinaVirtual.exe.config
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\bin\Debug\MaquinaVirtual.exe
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\bin\Debug\MaquinaVirtual.pdb
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.csprojAssemblyReference.cache
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.Form1.resources
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.Properties.Resources.resources
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.csproj.GenerateResource.cache
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.csproj.CoreCompileInputs.cache
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.exe
+C:\Users\Paulo\Desktop\Visual Studio Projetos\Compiladores\MaquinaVirtual\MaquinaVirtual\obj\Debug\MaquinaVirtual.pdb
